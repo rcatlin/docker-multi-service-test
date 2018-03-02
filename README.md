@@ -37,6 +37,10 @@ You should see the front-end form where you can enter a name for a greeting.
 
 ![Form Screenshot](https://github.com/rcatlin/docker-multi-service-test/raw/master/screenshot.png)
 
+5) Checkout the GraphQLi endpoint at `http://localhost:8888/graphql`
+
+![Form Screenshot](https://github.com/rcatlin/docker-multi-service-test/raw/master/screenshot_graphql.png)
+
 ### Versions
 
 ```bash
