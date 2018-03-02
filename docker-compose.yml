@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ./app
+    depends_on:
+      - api
+    ports:
+      - "9999:9999"
+
+  api:
+    build:
+      context: ./api
+    depends_on:
+      - redis
+    ports:
+      - "8888:8888"
+
+  redis:
+    image: redis:alpine
+
+volumes:
+  redis_data:
