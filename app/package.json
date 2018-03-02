@@ -11,13 +11,14 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "request": "^2.83.0",
     "watchify": "^3.10.0"
   },
   "scripts": {
-    "compile": "browserify src/index.js -o public/js/bundle.js -t [ babelify --presets [ es2015 react ] ]",
-    "start": "babel-node --presets es2015 server.js",
+    "compile": "browserify ./src/index.js -o ./public/js/bundle.js -t [ babelify --presets [ es2015 react ] ]",
+    "start": "babel-node --presets es2015 ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "watchify src/index.js -o public/js/bundle.js -v -t [ babelify --presets [ es2015 react ] ]"
+    "watch": "watchify ./src/index.js -o ./public/js/bundle.js -v -t [ babelify --presets [ es2015 react ] ]"
   },
   "name": "app",
   "version": "1.0.0",

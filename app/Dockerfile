@@ -7,9 +7,9 @@ COPY ./yarn.lock /yarn.lock
 
 RUN yarn install
 
-CMD [ "npm", "run compile" ]
-
 COPY . .
+
+RUN npm run compile
 
 EXPOSE $PORT
 

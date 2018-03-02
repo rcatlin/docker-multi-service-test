@@ -12,7 +12,7 @@ $> git clone git@github.com:rcatlin/docker-multi-service-test
 
 2) CD into project directory
 ```
-$> cd docker-multi-service-test 
+$> cd docker-multi-service-test
 ```
 
 3) Build and run Docker containers
@@ -23,10 +23,10 @@ $> make up
 You will now have three containers running
 ```
 $> docker ps
-CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                    NAMES
-266d012870af        dockermultiservice_api   "npm start"              32 minutes ago      Up 33 minutes       0.0.0.0:8888->8888/tcp   dockermultiservice_api_1
-86fb696901ad        redis:alpine             "docker-entrypoint.s…"   2 hours ago         Up 2 hours          6379/tcp                 dockermultiservice_redis_1
-6b93f0f0fc7b        dockermultiservice_app   "npm start"              20 hours ago        Up 20 hours         0.0.0.0:9999->9999/tcp   dockermultiservice_app_1
+CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS              PORTS                    NAMES
+ce80ab66d9f6        dockermultiservicetest_app   "npm start"              26 seconds ago      Up 12 seconds       0.0.0.0:9999->9999/tcp   dockermultiservicetest_app_1
+d27e882f4f26        dockermultiservicetest_api   "npm start"              27 seconds ago      Up 37 seconds       0.0.0.0:8888->8888/tcp   dockermultiservicetest_api_1
+29c7bfb63351        redis:alpine                 "docker-entrypoint.s…"   28 seconds ago      Up 37 seconds       6379/tcp                 dockermultiservicetest_redis_1
 ```
 
 The api is bound to port `8888`, and the app is bound to port `9999`
