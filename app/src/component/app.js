@@ -36,7 +36,7 @@ class App extends Component {
       },
       json: true,
       method: 'POST',
-      uri: this.props.api
+      uri: this.props.apiEndpoint
     };
 
     const handler = (err, resp, body) => {
@@ -89,7 +89,7 @@ class App extends Component {
 }
 
 App.propTypes = {
-  api: PropTypes.string.isRequired
+  apiEndpoint: PropTypes.string.isRequired
 };
 
 export default App;

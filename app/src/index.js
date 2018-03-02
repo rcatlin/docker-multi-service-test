@@ -3,12 +3,11 @@ import ReactDOM from 'react-dom';
 
 import App from './component/app';
 
-const apiEndpoint = process.env.API
-  ? process.env.api
-  : 'http://localhost:8000/graphql'
-  ;
+const apiEndpoint = `http://localhost:8888/graphql`;
+
+console.log('Api configured to: ' + apiEndpoint);
 
 ReactDOM.render(
-  <App api={apiEndpoint} />,
+  <App apiEndpoint={apiEndpoint} />,
   document.getElementById('app')
 );
